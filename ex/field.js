@@ -6,6 +6,7 @@ class Field extends Component {
     render() {
         return (
             <div>
+                <h1>{this.props.key2}</h1>
                 <label>{this.props.value}</label><br/> 
                 <input onChange={this.props.changeValue} value={this.props.value} />
             </div>
@@ -14,7 +15,8 @@ class Field extends Component {
 }
 const mapStateToProps = (state) => {
     return {
-        value: state.field.value
+        value: state.field.value,
+        key2: state.key2
     }
 }
 

@@ -2,12 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { combineReducers, createStore } from 'redux';
 import { Provider } from 'react-redux';
+import fieldReducer from './fieldReducer';
 
 const reducers = combineReducers({
-    field: () => {
-        console.log(`field call`)
-        return { value: 'React is good' }
-    }
+    field: fieldReducer,
+    key2: () => 'teste'
 });
 
 import Field from './field';
