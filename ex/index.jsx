@@ -4,7 +4,10 @@ import { combineReducers, createStore } from 'redux';
 import { Provider } from 'react-redux';
 
 const reducers = combineReducers({
-    field: () => ({ value: 'Ireland' })
+    field: () => {
+        console.log(`field call`)
+        return { value: 'React is good' }
+    }
 });
 
 import Field from './field';
