@@ -15,7 +15,7 @@ export default function (state = INITIAL_STATE, action) {
         case 'STEP_CHANGED':
             return {
                 ...state,
-                step: action.payload
+                step: +action.payload
             }
         default:
             return state;
